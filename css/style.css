@@ -1,0 +1,519 @@
+
+/*------------------*/
+/* MENU AND POPUP */
+/*------------------*/
+
+.pure-menu {
+/* 	Color of top bar */		
+ 	background: #62AADB !important; 
+ 	z-index: 8 !important;
+}
+
+.pure-menu a {
+	padding: 0 !important;
+}
+
+.menu-btn {
+/* Three line menu button */
+	float :right;
+	width: 57px;
+	height: 57px;
+}
+
+.menu-popup {
+	display: none;
+	position: fixed;
+	top: 70px;
+	right: 10px;
+	min-width: 150px;
+	height: 120px;
+	z-index: 7;
+}
+
+.bubble 
+{
+	position: relative;
+	width: auto;
+	padding: 0px;
+	padding-bottom: 1px;
+	background: #62AADB;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.bubble:after 
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 0 10px 13px;
+	border-color: #62AADB transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: -13px;
+	right: 13px;
+}
+
+.menu-popup>div>ul {
+	list-style: none;
+	padding: 0;
+	margin-right: 20px;
+}
+
+#language-select-title {
+	padding-top:10px !important;
+	font-weight:bold;	
+	margin-left: 20px;
+	font-size: 14pt;
+}
+
+.menu-popup>div>ul>li {
+	color: white;
+}
+
+.menu-popup>div>ul>li>a:active {
+	background-color:white;
+	color: #62AADB !important;
+}
+
+.menu-popup>div>ul>li>a {
+/* 	display:none; */
+	text-decoration:none;
+	color: white;
+	width:100%;
+	display: block;
+	padding-left: 20px;
+}
+
+#overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: black;
+  opacity:0.3; /* see below for cross-browser opacity */
+  z-index: 5;
+  display: none;
+}
+
+/*-----------------------*/
+/* END OF MENU AND POPUP */
+/*----------------------*/
+
+
+/*------*/
+/* FAQ */
+/*-----*/
+ol.tree
+{
+	padding: 0;
+}
+	ol > li 
+	{
+		margin-bottom: 30px;
+	}
+	
+	li 
+	{ 
+		position: relative; 
+		margin-left: 0px;
+		list-style: none;
+	}
+	li.faq_answer
+	{
+		margin-left: -1px !important;
+	}
+	li.faq_answer a
+	{
+/* 		background: url(document.png) 0 0 no-repeat; */
+		color: #fff;
+		padding-left: 21px;
+		text-decoration: none;
+		display: block;
+	}
+	li input
+	{
+		position: absolute;
+		left: 0px;
+		right:0px;
+		margin-left: 0; 
+		opacity: 0;
+		
+		z-index: 1;
+		cursor: pointer;
+		height: 20px;
+		width: 30px;
+		top: 0;
+		
+	}
+	
+	li input + div > label 
+	{
+		background: url(../img/icon_faq_expand.png) 100% 0px no-repeat;
+		background-position: right top;
+		background-size: 20px 20px;		
+
+		z-index: 1;
+	}
+	
+	li input:checked + div > label 
+	{
+		background: url(../img/icon_faq_collapse.png) 100% 0px no-repeat;
+		background-position: right top;
+		background-size: 20px 20px;	
+		
+		z-index: 1;
+	}
+	
+	li input + div > ol
+	{
+
+	}
+	li input + div>ol > li { display: none; margin-left: 0px !important; padding-left: 1px; }
+	li label
+	{
+		cursor: pointer;
+		display: block;
+	}
+	li input:checked + div>ol
+	{
+		margin-bottom: 30px;
+		margin-top:-50px;;
+		margin-right:20px;
+	}
+	li input:checked + div > ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+	li input:checked + div > ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
+	
+	.faq_question {
+		color: #27AABA;
+		font-weight: bold;
+		padding-right: 20px;
+	}
+	
+	.faq_answer {
+		
+	}
+	
+/*------*/
+/* END FAQ */
+/*-----*/
+
+.header {
+	display: block;
+	margin-bottom: 10px;
+}
+.content {
+/* Make the content to appear below top bar */
+	/* minus section margin-top */
+	margin: 47px auto 0;
+	padding: 1em 1.5em;
+}
+
+.section {
+	margin-top: 5px;	
+}
+
+.section-detail {
+	margin-top: 10px;	
+	margin-bottom: 10px;
+}
+
+.content>h1 {
+	color: #B0B0B0;
+}
+
+.pure-menu {
+	/* clear 1px border from purecss */
+	border-bottom: 0 !important;
+}
+
+.game-list-item {
+	text-align: center;	
+	margin-bottom: 5px;
+}
+
+.game-list-item>span {
+	color:#B0B0B0;
+}
+
+.game-list-item-img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* #### TEXT STYLES ####*/
+.header>span {
+	color: #B0B0B0;
+}
+
+.text-section-title {
+	color :#62AADB;	
+	font-weight:bold;
+}
+
+.text-section-body {
+	color:#A9A9A9;
+	vertical-align: middle;
+}
+
+.text-section-title.detail-page {
+	color:#27AABA;
+}
+
+.footer {
+/* 	position: fixed; */
+/* 	bottom:20px;	 */
+	width: 100%;
+}
+
+.footer>span{	
+	color: #A9A9A9;
+	line-height: 2em !important;
+}
+
+.footer>span>a{
+	text-decoration: none;
+	color: #A9A9A9;
+	line-height: 2em !important;
+}
+
+.footer-right{
+	float:right;
+}
+
+.line-separator {
+	height: 1px;
+	background:  #D8D8D9;
+	border-bottom: 0.5px solid #D8D8D9;
+	margin-left: -.5em;
+	margin-right: -.5em;
+}
+
+/* download button color */
+.pure-button-secondary {
+	background: #62AADB !important; 
+	color: white !important;
+    border-radius: 4px !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) !important;
+}
+
+.custom-hyperlink {
+	text-decoration: none;
+	color: #7F807E;
+}
+
+/*------------------------*/
+/* Screen specific rules */
+/*------------------------*/
+
+/*### Phones ###*/
+@media (max-width:640px) {
+	.header>span {
+		font-size: 14pt;
+	}
+	
+	#icon-logo {
+		margin-top:5px;
+		margin-left:14px;
+		width:75px;
+		height:47px;
+	}
+	
+	.text-section-title {
+		font-size: 14pt;
+	}
+	
+	.text-section-body {
+		font-size: 10pt;
+	}
+	
+	.text-section-body.indent {
+		margin-left : 20px;
+	}
+	
+	img.game-icon {
+		width: 75px;
+		height: 75px;
+	}
+	
+	/* bigger icon at game page */
+	img.game-icon-detail {
+		width: 100px;
+		height: 100px;
+		float:left; margin-right:10px
+	}
+	
+	img.contact-icon {
+		width: 26px;
+		height: 26px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	
+	img.contact-icon.detail-page {
+		width: 15px;
+		height: 15px;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	
+	.game-list-item-img {
+		/* make the image centered within the div*/
+		width: 75px;
+	}
+	
+	.game-list-item>span {
+		font-size: 10pt;
+	}
+	
+	.menu-popup>div>ul>li {
+/* 		padding-left: 0px; */
+		vertical-align: middle;
+		min-height : 30px;
+		line-height: 30px;
+		min-width: 150px;
+/* 		margin-right: 20px; */
+	}
+	
+	.pure-button-secondary {
+		font-size: 8pt !important;
+	}
+	
+	/* faq question font size for mobile*/
+	.faq_question {
+		font-size: 12pt;
+	}
+	
+	.faq_answer {
+		font-size: 12pt;
+	}
+	
+	li input + div > ol {
+		margin: -0.938em 0 0 -44px; /* 15px */
+	}
+	
+	li input:checked + div > ol {
+		margin: -40px 0 0 0px; /* 20px */
+		padding: 50px 0 0 0px;
+	}
+	
+	.footer>span{	
+		font-size: 10pt;
+	}	
+
+	.footer>span>a{
+		font-size: 10pt;
+	}
+}
+
+/*### Tablets and dekstop ###*/
+@media (min-width:641px) {
+	.header>span {
+		font-size: 37pt;
+	}
+	
+	#icon-logo {
+		margin-top:5px;
+		margin-left:20px;
+		width:75px;
+		height:47px;
+	}
+	
+	.text-section-title {
+		font-size: 24pt;
+	}
+	
+	.text-section-body {
+		font-size: 18pt;
+	}
+	
+	.text-section-body.indent {
+		margin-left : 20px;
+	}
+	
+	/* icon list at main page */
+	img.game-icon {
+		width: 160px;
+		height: 160px;
+	}
+	
+	/* bigger icon at game page */
+	img.game-icon-detail {
+		width: 160px;
+		height: 160px;
+		float:left; 
+		margin-right:20px;
+		vertical-align: middle;
+	}
+	
+	.section-detail p {
+		font-size: 20pt;
+	}
+	
+	img.contact-icon {
+		width: 44px;
+		height: 44px;
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+	
+	img.contact-icon.detail-page {
+		width: 13px;
+		height: 13px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+	
+	.game-list-item-img {
+		/* make the image centered within the div*/
+		/* must be same as img.game-icon*/
+		width: 160px;
+	}
+	
+	.game-list-item>span {
+		font-size: 14pt;
+	}
+	
+	.menu-popup>div>ul>li {
+/* 		padding-left: 0px; */
+		vertical-align: middle;
+		min-height : 30px;
+		line-height: 30px;
+		min-width: 150px;
+/* 		margin-right: 20px; */
+	}
+	
+	.faq_question {
+		font-size: 15pt;
+	}
+	.faq_answer {
+		font-size: 15pt;
+	}
+	
+	li input + div > ol {
+		margin: -0.938em 0 0 -44px; /* 15px */
+	}
+	
+	li input:checked + div > ol {
+		margin: -20px 0 0 0px; /* 20px */
+		padding: 30px 0 0 0px;
+	}
+	
+	.footer>span{	
+		font-size: 10pt;
+	}	
+
+	.footer>span>a{
+		font-size: 10pt;
+	}
+}
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: Helvetica, Times, "Times New Roman", serif;
+}

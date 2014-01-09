@@ -1,4 +1,7 @@
 
+html,body {
+	height:100%; /* needed for container min-height */
+}
 /*------------------*/
 /* MENU AND POPUP */
 /*------------------*/
@@ -16,14 +19,16 @@
 .menu-btn {
 /* Three line menu button */
 	float :right;
-	width: 57px;
-	height: 57px;
+	margin-right :20px;
+	margin-top: 10px;
+	width: 28px;
+	height: 22px;
 }
 
 .menu-popup {
 	display: none;
 	position: fixed;
-	top: 70px;
+	top: 50px;
 	right: 10px;
 	min-width: 150px;
 	height: 120px;
@@ -188,7 +193,7 @@ ol.tree
 	li input:checked + div > ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
 	
 	.faq_question {
-		color: #27AABA;
+		color: #62AADB;
 		font-weight: bold;
 		padding-right: 20px;
 	}
@@ -204,16 +209,25 @@ ol.tree
 .header {
 	display: block;
 	margin-bottom: 10px;
+	padding-top: 50px !important;
+	margin-top: 0 !important;
 }
 .content {
 /* Make the content to appear below top bar */
 	/* minus section margin-top */
-	margin: 47px auto 0;
-	padding: 1em 1.5em;
+/* 	margin: 30px auto 0; */
+/* 	padding: 1em 1.5em; */
+	padding-left: 1em;
+	padding-right: 1em;
+	min-height:100%;
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-hei */
+	position:relative;
 }
 
 .section {
 	margin-top: 5px;	
+	display: block;
 }
 
 .section-detail {
@@ -260,13 +274,19 @@ ol.tree
 }
 
 .text-section-title.detail-page {
-	color:#27AABA;
+	color:#62AADB;
 }
 
 .footer {
-/* 	position: fixed; */
-/* 	bottom:20px;	 */
-	width: 100%;
+ 	position: absolute	; 
+ 	bottom: 0px;
+/*
+	bottom: -20px;
+	height:20px;
+*/
+	left: 1em;
+	right: 1em;
+	padding-top: 1em;
 }
 
 .footer>span{	
@@ -282,9 +302,22 @@ ol.tree
 
 .footer-right{
 	float:right;
+	position: absolute;
+	right: 0px;
+}
+
+.line-separator-footer {
+	position: absolute;
+	height: 1px;
+	background:  #D8D8D9;
+	width: auto;
+	left: 0;
+	right: 0px;
+/* 	border-bottom: 0.5px solid #D8D8D9; */
 }
 
 .line-separator {
+	position: relative;
 	height: 1px;
 	background:  #D8D8D9;
 	border-bottom: 0.5px solid #D8D8D9;
@@ -318,8 +351,8 @@ ol.tree
 	#icon-logo {
 		margin-top:5px;
 		margin-left:14px;
-		width:75px;
-		height:47px;
+		width:138px;
+		height:28px;
 	}
 	
 	.text-section-title {
@@ -418,8 +451,8 @@ ol.tree
 	#icon-logo {
 		margin-top:5px;
 		margin-left:20px;
-		width:75px;
-		height:47px;
+		width:138px;
+		height:28px;
 	}
 	
 	.text-section-title {

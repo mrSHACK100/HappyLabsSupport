@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+ 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Pure CSS 4.4kb -->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Labs</title>
+    
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- to make clicking more responsive on mobile touch -->
+    <script type='application/javascript' src='js/fastclick.min.js'></script>
+    <script type='application/javascript' src='js/appuniversalurl.js'></script>
+</head>
+
+<body id="home">
+	<div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+        <a class="pure-menu-heading company-logo" href="index.html"><img id="icon-logo" src="img/icon_logo.png"/></a>
+        <a class="pure-menu-heading company-logo" style="float:right" href="javascript:OnMenuClick()"><img class="menu-btn" src="img/icon_menu.png"/></a>
+    </div>
+    
+    <!-- language selection start-->
+    <div id="menu-popup" class="menu-popup">
+    	<div class="bubble">
+	    	<ul>
+	    		<li id="language-select-title">Select languages</li>
+				<li><a href="game_hs.html">English</a></li>
+				<li><a href="zht/game_hs.html">Chinese(Traditional)</a></li>
+				<li><a href="zhs/game_hs.html">Chinese(Simplified)</a></li>
+				<li><a href="th/game_hs.html">Thai</a></li>
+				<li><a href="id/game_hs.html">Bahasa Indonesia</a></li>
+			</ul>
+    	</div>
+    </div>
+    <!-- language selection end-->
+	
+	<!-- overlay appear when language selection popup appear-->
+	<div id="overlay" onclick="OnMenuClick()"></div>
+
+	<div class="content">
+
+		<!-- **************-->		
+		<!-- Games section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title detail-page">
+				 <span> Hotel Story </span>
+			 </div>
+		</div>
+		<div class="pure-g section-detail">
+	        <div class="pure-u-1">
+	        	<p class="text-section-body">
+					<img class="game-icon-detail" src="img/icon_hms.png"/> Build the shopping mall of your dreams! Attract tons of customers and be the most popular mall ever! 
+				</p>
+				<button class="pure-button pure-button-secondary" onclick="downloadAppWithInfo('579188627', 'com.happylabs.hotelstory');">DOWNLOAD</button>
+	        </div>
+	    </div>
+	    <!-- END Games section -->		
+		<!-- ***************** -->
+	    
+	    <div class="line-separator"></div>
+	    
+		<!-- ******************* -->		
+		<!-- Contact us section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title detail-page">
+				 <span> Contact Us </span>
+			 </div>
+			 <div class="pure-u-1 text-section-body detail-page indent">
+			 <p>
+			 <img src="img/icon_fb.png" class="contact-icon detail-page"/> <a href='http://www.facebook.com/hotelstory' class="custom-hyperlink">/hotelstory</a>
+			 <br>
+			 <img src="img/icon_twitter.png" class="contact-icon detail-page"/> <a href='https://twitter.com/hotelstory' class="custom-hyperlink">@hotelstory</a>
+			 </p>
+			 </div>
+		</div>
+		<div class="line-separator"></div>
+		<!-- ******************* -->		
+		<!-- END Contact us section -->
+		
+		<!-- ************** -->		
+		<!-- Support section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title detail-page">
+				 <span> Support </span>
+			 </div>
+			 <div class="pure-u-1 text-section-body detail-page indent">
+			 <p>
+			 Have a question for isabelle?<br>
+			 <img src="img/icon_mail.png" class="contact-icon detail-page"/> <a href='mailto:isabelle@happylabsfree.com' class="custom-hyperlink">isabelle@happylabsfree.com</a>
+			 </p>
+			 </div>
+		</div>
+		<div class="line-separator"></div>
+		<!-- ******************** -->		
+		<!-- END Support section -->
+		
+		<!-- ************** -->		
+		<!-- FAQ section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title detail-page">
+				 <span> FAQ </span>
+			 </div>
+			 <div class="pure-u-1 text-section-body detail-page">
+		
+				 <!-- ******** -->
+				 <!-- FAQ Tree -->
+				 <ol class="tree">
+				 
+				 	 <!-- ******** -->
+				 	 <!-- FAQ Entry -->
+				 	 <!--
+				 	 	replace the digit behind question1, answer1 for each new faq entry. so collapsible works properly
+				 	 -->
+					 <li>
+						 <input type="checkbox" id="question1" />
+						 <div>
+						 <label for="question1" class="faq_question">Q: How do I get the pink bedrooms/couple bedrooms?</label>
+						 <ol>
+							 <li>
+								 <label for="answer1" class="faq_answer text-section-body">A: Keep on doing the "Invest in" tourist quests until the young couple appears. Go to your Quests, there is a diamond button at the top-left side, and you should be able to see "Invest in xxxx" quests sometimes. After you have unlocked the young couple, the bedroom that they stay in will turn pink.</label>
+							</li>
+						</ol>
+						 </div>
+					</li>
+					
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question2" />
+						 <div>
+						 <label for="question2" class="faq_question">Q: How come there is a not connected sign on my building? What does the yellow sign with the red exclamation mark in it mean?</label>
+						 <ol>
+							 <li>
+								 <label for="answer2" class="faq_answer text-section-body">
+A: It means the building is not connected by a walking path to the entrance of the hotel.</label>
+							</li>
+						</ol>
+						 </div>
+					</li>
+					
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question3" />
+						 <div>
+						 <label for="question3" class="faq_question">Q: How do I add friends?</label>
+						 <ol>
+							 <li>
+								 <label for="answer3" class="faq_answer text-section-body">A: Key in the ID of your friend in the friend window (search friend).</label>
+							</li>
+						 </ol>
+						 </div>
+					</li>
+
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question4" />
+						 <div>
+						 <label for="question4" class="faq_question">Q: How come I cannot add any friends with their ID?</label>
+						 <ol>
+							 <li>
+								 <label for="answer4" class="faq_answer text-section-body">A: The ID is case sensitive, Be careful of big i and small L, also 0 (zero) and big o.</label>
+							</li>
+						 </ol>
+						 </div>
+					</li>
+
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question5" />
+						 <div>
+						 <label for="question5" class="faq_question">Q: Is there any maximum number for Appeal?</label>
+						 <ol>
+							 <li>
+								 <label for="answer5" class="faq_answer text-section-body">A: There is no maximum, but you should not go above 500.</label>
+							</li>
+						 </ol>
+						 </div>
+					</li>
+
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question6" />
+						 <div>
+						 <label for="question6" class="faq_question">Q: How do I delete floors on Android?</label>
+						 <ol>
+							 <li>
+								 <label for="answer6" class="faq_answer text-section-body">A: Select them first (hold on for a few seconds), then you can sell them - the initial floors cannot be sold now.</label>
+							</li>
+						 </ol>
+						 </div>
+					</li>
+
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question7" />
+						 <div>
+						 <label for="question7" class="faq_question">Q: Where do I buy items? What are they used for? How can I use them?</label>
+						 <ol>
+							 <li>
+								 <label for="answer7" class="faq_answer text-section-body">A: Items can be bought from the store just located outside the hotel. Items can be used to increase the Appeal/Price of the facilities . Tap on a facility (E.G, bedroom), then tap again on the "Info" icon. Tap on "Use Item", to select an item of your choice to use.</label>
+							</li>
+						 </ol>
+						 </div>
+					</li>
+
+					<!-- ******** -->
+				 	<!-- FAQ Entry -->
+					<li>
+						 <input type="checkbox" id="question8" />
+						 <div>
+						 <label for="question8" class="faq_question">Q: How do I remove advertisements?</label>
+						 <ol>
+							 <li>
+								 <label for="answer8" class="faq_answer text-section-body">A: Advertisements will be removed with any purchase of diamonds.</label>
+							</li>
+						 </ol>
+						 </div>
+					</li>
+					<!-- END FAQ Entries -->
+				 	<!-- ************* -->
+				 	
+				</ol>
+				<!-- END FAQ Tree -->
+				<!-- ************ -->
+				
+			 </div>
+		</div>
+		<!-- ************** -->		
+		<!-- END FAQ section -->
+		
+		<br>
+		<div class="footer">
+		<div class="line-separator"></div>
+			<span class="footer-left">
+				Happy Labs©2014
+			</span>
+			<span class="footer-right">
+				<a href="privacy.html">Privacy Policy</a>
+			</span>
+		</div>
+	</div>		
+</body>
+
+
+<script>
+
+// initialize fast click on menu button
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
+// Handle menu click show and dismiss
+var isMenuShowing = false;
+function OnMenuClick() {
+	if (!isMenuShowing) 
+		ShowMenu();
+	else 
+		HideMenu();
+}
+
+function ShowMenu() {
+	var menuPopup = (document.getElementById('menu-popup')).style;
+	menuPopup.display = 'block';
+	
+	var overlay = (document.getElementById('overlay')).style;
+	overlay.display = 'block';
+	isMenuShowing=true;
+}
+
+function HideMenu() {
+	var menuPopup = (document.getElementById('menu-popup')).style;
+	menuPopup.display = 'none';
+	
+	var overlay = (document.getElementById('overlay')).style;
+	overlay.display = 'none';
+	isMenuShowing=false;
+}
+</script>
+</html>

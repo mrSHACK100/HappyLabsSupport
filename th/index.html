@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+ 	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Pure CSS 4.4kb -->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Labs</title>
+    
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- to make clicking more responsive on mobile touch -->
+    <script type='application/javascript' src='../js/fastclick.min.js'></script>
+    <script type='application/javascript' src='../js/appuniversalurl.js'></script>
+</head>
+
+<body id="home">
+	<div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+        <a class="pure-menu-heading company-logo" href="#"><img id="icon-logo" src="../img/icon_logo.png"/></a>
+        <a class="pure-menu-heading company-logo" style="float:right" href="javascript:OnMenuClick()"><img class="menu-btn" src="../img/icon_menu.png"/></a>
+    </div>
+    
+    <!-- language selection start-->
+    <div id="menu-popup" class="menu-popup">
+    	<div class="bubble">
+	    	<ul>
+	    		<li id="language-select-title">Select languages</li>
+				<li><a href="../index.html">English</a></li>
+				<li><a href="../zht/index.html">Chinese(Traditional)</a></li>
+				<li><a href="../zhs/index.html">Chinese(Simplified)</a></li>
+				<li><a href="../th/index.html">Thai</a></li>
+				<li><a href="../id/index.html">Bahasa Indonesia</a></li>
+			</ul>
+    	</div>
+    </div>
+    <!-- language selection end-->
+	
+	<!-- overlay appear when language selection popup appear-->
+	<div id="overlay" onclick="OnMenuClick()"></div>
+	
+	<div class="content">
+		<!-- *********** -->
+		<!-- INTRO START -->
+		<div class="section header">
+			<span>Hello Everyone! 
+			<br>Welcome to Happy Labs.</span>
+		</div>
+		<div class="line-separator"></div>
+		<!-- INTRO END -->
+		<!-- ********* -->
+
+		<!-- Games section -->		
+		<!-- Games section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title">
+				 <span> Our Games </span>
+			 </div>
+		</div>
+		<div class="pure-g section">
+	        <div class="pure-u-1-3 game-list-item">
+	        	<div class="game-list-item-img">
+		            <a href="game_hms.html"><img class="game-icon" src="../img/icon_hms.png"/></a>
+	        	</div>
+	        	<span>Happy Mall Story</span>
+	        </div>
+	        <div class="pure-u-1-3 game-list-item">
+	            <div class="game-list-item-img">
+		            <a href="game_hs.html"><img class="game-icon" src="../img/icon_hs.png"/></a>
+	        	</div>
+	        	<span>Hotel Story</span>
+	        </div>
+	    </div>
+	    <div class="line-separator"></div>
+	    
+	    <!-- About us section -->		
+		<!-- About us section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title">
+				 <span> About Us </span>
+			 </div>
+			 <div class="pure-u-1 text-section-body">
+				 <p> Happy Labs mission is to create free-to-play games for anyone, anywhere, any situation. <br>We believe in the power of FREE</p>
+			 </div>
+		</div>
+		<div class="line-separator"></div>
+		
+		<!-- Contact us section -->		
+		<!-- Contact us section -->
+		<div class="pure-g-r section">
+			 <div class="pure-u-1 text-section-title">
+				 <span> Contact Us </span>
+			 </div>
+			 <div class="pure-u-1 text-section-body">
+			 <p>
+			 <img src="../img/icon_fb.png" class="contact-icon"/> <a href='http://www.facebook.com/happyhappylabs' class="custom-hyperlink">www.facebook.com/happyhappylabs</a>
+			 </p>
+			 <p>
+			 <img src="../img/icon_mail.png" class="contact-icon"/> <a href='mailto:support@happylabsfree.com' class="custom-hyperlink">support@happylabsfree.com</a>
+			 </p>
+			 <p>
+			 <img src="../img/icon_twitter.png" class="contact-icon"/> <a href='https://twitter.com/happyhappylabs' class="custom-hyperlink">@happyhappylabs</a>
+			 </p>
+			 </div>
+		</div>
+		
+		
+		<br> <!-- dont remove this, fix overlapping footer -->
+		<div class="footer">
+			<div class="line-separator-footer"></div>
+			<span class="footer-left">
+				Happy Labs©2014
+			</span>
+			<span class="footer-right">
+				<a href="privacy.html">Privacy Policy</a>
+			</span>
+		</div>
+	</div>		
+</body>
+
+<script>
+// make the page scroll down on load on mobile
+window.scrollTo(0,1) 
+
+// initialize fast click on menu button
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
+// Handle menu click show and dismiss
+var isMenuShowing = false;
+function OnMenuClick() {
+	if (!isMenuShowing) 
+		ShowMenu();
+	else 
+		HideMenu();
+}
+
+function ShowMenu() {
+	var menuPopup = (document.getElementById('menu-popup')).style;
+	menuPopup.display = 'block';
+	
+	var overlay = (document.getElementById('overlay')).style;
+	overlay.display = 'block';
+	isMenuShowing=true;
+}
+
+function HideMenu() {
+	var menuPopup = (document.getElementById('menu-popup')).style;
+	menuPopup.display = 'none';
+	
+	var overlay = (document.getElementById('overlay')).style;
+	overlay.display = 'none';
+	isMenuShowing=false;
+}
+</script>
+</html>

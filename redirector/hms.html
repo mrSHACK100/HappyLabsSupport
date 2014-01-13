@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+
+            function generateCorrectURLforApp (itunesAppId, androidPackageName) {
+                if (isMobile.iOS()) {
+                    // var itunesURL = 'itms-apps://itunes.apple.com/app/id'+itunesAppId+'?at=10l6dK';
+                    var itunesURL = 'http://tiny.cc/3ooe9w';
+                    return itunesURL;
+                }else if (isMobile.Android()) {
+                    var googlePlayURL = 'http://tiny.cc/7qoe9w';
+                    return googlePlayURL;
+                }else {
+                    var desktopURL = "http://tiny.cc/photospot";
+                    return desktopURL;
+                }
+            }
+
+            function downloadAppWithInfo(itunesAppId, androidPackageName) {
+                var url = generateCorrectURLforApp(itunesAppId, androidPackageName);
+                window.location.href = url;
+            }
+
+            //downloadAppWithInfo("768445788", "com.unplug.photospotmania");
+        </script>
+        <title>Happy Mall Story 开心商店 ハッピーモール แฮปปี้มอลล์สตอรี่</title>
+    </head>
+    <body>
+        opening ...
+        <a href="/?hl=en&amp;tab=TT&amp;authuser=0" title="Translate" data-ved="0CBgQxC4"><span class="gb_g"></span></a>
+    </body>
+</html>
+

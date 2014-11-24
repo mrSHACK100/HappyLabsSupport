@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+
+            function generateCorrectURLforApp () {
+                if (isMobile.iOS()) {
+                    var itunesURL = 'https://itunes.apple.com/app/id944109195';
+                    return itunesURL;
+                }else if (isMobile.Android()) {
+                    var googlePlayURL = 'https://play.google.com/store/apps/details?id=com.happylabs.happypetfind';
+                    return googlePlayURL;
+                }else {
+                    var desktopURL = "http://happylabs.weebly.com/";
+                    return desktopURL;
+                }
+            }
+
+            function downloadAppWithInfo() {
+                var url = generateCorrectURLforApp();
+                window.location.href = url;
+            }
+
+            downloadAppWithInfo();
+        </script>
+        <title>Happy Pet Find</title>
+    </head>
+    <body>
+        <a href="https://play.google.com/store/apps/details?id=com.happylabs.happypetfind">Google Play</a>
+        <br><br>
+        <a href="https://itunes.apple.com/app/id944109195">Apple Store</a>
+    </body>
+</html>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>promo</key>
+	<array>
+		<dict>
+			<key>image_p</key>
+			<string>https://s3-ap-southeast-1.amazonaws.com/happy-labs-website/tri/test.jpg</string>
+			<key>image_l</key>
+			<string>https://s3-ap-southeast-1.amazonaws.com/happy-labs-website/tri/test.jpg</string>
+			<key>appid</key>
+			<string>579188627</string>
+			<key>url_scheme</key>
+			<string>hotelstory</string>
+		</dict>
+		<dict>
+			<key>image_p</key>
+			<string>https://s3-ap-southeast-1.amazonaws.com/happy-labs-website/tri/test.jpg</string>
+			<key>image_l</key>
+			<string>https://s3-ap-southeast-1.amazonaws.com/happy-labs-website/tri/test.jpg</string>
+			<key>appid</key>
+			<string>703327328</string>
+			<key>url_scheme</key>
+			<string>hms</string>
+		</dict>
+	</array>
+</dict>
+</plist>

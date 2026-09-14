@@ -20,11 +20,16 @@ var isMobile = {
 };
 
 function generateCorrectURLforApp (itunesAppId, androidPackageName) {
+    var iTunesURLByPackageName = {
+        'com.happylabs.hotelstory': 'https://itunes.apple.com/sg/app/hotel-story/id579188627',
+        'com.happylabs.happymall': 'https://itunes.apple.com/sg/app/happy-mall-story-be-shopping/id703327328'
+    };
+
 	if (isMobile.iOS()) {
-		var itunesURL = 'itms-apps://itunes.apple.com/app/id'+itunesAppId+'?at=10l6dK';
+		var itunesURL = iTunesURLByPackageName[androidPackageName] || ('https://itunes.apple.com/app/id' + itunesAppId);
 		return itunesURL;
 	}else if (isMobile.Android()) {
-		var googlePlayURL = 'market://details?id='+androidPackageName;
+		var googlePlayURL = 'https://play.google.com/store/apps/details?id=' + androidPackageName;
 		return googlePlayURL;
 	}else {
 		var desktopURL = "https://play.google.com/store/apps/developer?id=Happy+Labs";

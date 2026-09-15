@@ -1,8 +1,8 @@
-# Sample workflow for building and deploying a Nuxt site to GitHub Pages
+# Sample workflow for deploying a static site to GitHub Pages
 #
-# To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
+# This repository is deployed as a static site.
 #
-name: Deploy Nuxt site to Pages
+name: Deploy static site to Pages
 
 on:
   # Runs on pushes targeting the default branch

@@ -1,4 +1,8 @@
-name: Deploy site to Pages
+# Sample workflow for deploying a static site to GitHub Pages
+#
+# This repository is deployed as a static site.
+#
+name: Deploy static site to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -27,8 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

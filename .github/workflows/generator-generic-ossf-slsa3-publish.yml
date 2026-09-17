@@ -13,6 +13,17 @@
 name: SLSA generic generator
 on:
   workflow_dispatch:
+    inputs:
+      upload_assets:
+        description: "Upload assets to release"
+        type: boolean
+        required: false
+        default: false
+      upload_tag_name:
+        description: "Tag name to upload assets to"
+        type: string
+        required: false
+        default: ""
   release:
     types: [created]
 
@@ -60,7 +71,8 @@ jobs:
       actions: read   # To read the workflow path.
       id-token: write # To sign the provenance.
       contents: write # To add assets to a release.
-    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.4.0
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v2.1.0
     with:
       base64-subjects: "${{ needs.build.outputs.digests }}"
-      upload-assets: true # Optional: Upload to a new release
+      upload-assets: ${{ github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.upload_assets && (github.ref_type == 'tag' || inputs.upload_tag_name != '')) }}
+      upload-tag-name: "${{ inputs.upload_tag_name }}"

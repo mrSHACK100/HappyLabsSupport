@@ -27,6 +27,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    if: ${{ github.event.repository.has_pages }}
     runs-on: ubuntu-latest
     if: github.event.repository.has_pages == true
     steps:
@@ -39,6 +40,7 @@ jobs:
 
   # Deployment job
   deploy:
+    if: ${{ github.event.repository.has_pages }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
